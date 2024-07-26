@@ -6,10 +6,11 @@ import edu.ict.rms.entity.ItemEntity;
 import edu.ict.rms.repository.ItemRepository;
 import edu.ict.rms.service.item.ItemService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Service
 @RequiredArgsConstructor
 public class ItemServiceImpl implements ItemService {
     final ObjectMapper mapper;
