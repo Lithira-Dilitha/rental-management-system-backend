@@ -13,7 +13,7 @@ import lombok.*;
 public class CustomerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private String name;
     private String city;
     private Integer contact;

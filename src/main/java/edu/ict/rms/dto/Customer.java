@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 public class Customer {
-    private Integer id;
+    private Long id;
     private String name;
     private String city;
     private Integer contact;
