@@ -8,6 +8,9 @@ import edu.ict.rms.service.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class CustomerServiceImpl implements CustomerService {
@@ -26,5 +29,15 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void delete(Long id) {
         repository.deleteById(id);
+    }
+
+    @Override
+    public List<Customer> allCustomers() {
+        List<Customer>customerList = new ArrayList<>();
+        List<CustomerEntity> customerEntities = repository.findAll();
+        customerEntities.forEach(customerEntity ->
+            customerList.add(mapper.convertValue(customerEntity, Customer.class))
+        );
+        return customerList;
     }
 }

@@ -5,6 +5,8 @@ import edu.ict.rms.service.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/customer-controller")
@@ -21,5 +23,9 @@ public class CustomerController {
     @DeleteMapping("/customer/{id}")
     void delete(@PathVariable Long id){
         service.delete(id);
+    }
+    @GetMapping("/customers")
+    List<Customer> getAll(){
+        return service.allCustomers();
     }
 }
