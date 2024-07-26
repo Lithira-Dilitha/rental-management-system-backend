@@ -17,4 +17,14 @@ public class CustomerServiceImpl implements CustomerService {
     public void save(Customer customer) {
         repository.save(mapper.convertValue(customer, CustomerEntity.class));
     }
+
+    @Override
+    public void update(Customer customer) {
+        repository.save(mapper.convertValue(customer, CustomerEntity.class));
+    }
+
+    @Override
+    public void delete(Long id) {
+        repository.deleteById(id);
+    }
 }

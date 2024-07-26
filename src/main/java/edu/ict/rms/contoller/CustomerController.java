@@ -3,10 +3,7 @@ package edu.ict.rms.contoller;
 import edu.ict.rms.dto.Customer;
 import edu.ict.rms.service.CustomerService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -16,5 +13,13 @@ public class CustomerController {
     @PostMapping("/customer")
     void save(@RequestBody Customer customer){
         service.save(customer);
+    }
+    @PutMapping("/customer")
+    void update(@RequestBody Customer customer){
+        service.update(customer);
+    }
+    @DeleteMapping("/customer/{id}")
+    void delete(@PathVariable Long id){
+        service.delete(id);
     }
 }
