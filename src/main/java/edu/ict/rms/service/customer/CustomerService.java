@@ -1,4 +1,4 @@
-package edu.ict.rms.service;
+package edu.ict.rms.service.customer;
 
 import edu.ict.rms.dto.Customer;
 

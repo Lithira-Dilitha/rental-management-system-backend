@@ -1,7 +1,7 @@
 package edu.ict.rms.contoller;
 
 import edu.ict.rms.dto.Customer;
-import edu.ict.rms.service.CustomerService;
+import edu.ict.rms.service.customer.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

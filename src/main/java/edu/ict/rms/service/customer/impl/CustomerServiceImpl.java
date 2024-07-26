@@ -1,10 +1,10 @@
-package edu.ict.rms.service.impl;
+package edu.ict.rms.service.customer.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.ict.rms.dto.Customer;
 import edu.ict.rms.entity.CustomerEntity;
 import edu.ict.rms.repository.CustomerRepository;
-import edu.ict.rms.service.CustomerService;
+import edu.ict.rms.service.customer.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
