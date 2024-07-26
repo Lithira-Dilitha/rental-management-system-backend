@@ -1,0 +1,5 @@
+Spring:
+  Datasource:
+    username: root
+    password: sql1234
+    url: jdbc:mysql://localhost:3306/rental_system
